@@ -1,0 +1,156 @@
+body {
+
+    background-image: url(bg.jpg);
+}
+
+.animatebox {
+    position: relative;
+    width: 600px;
+    height: 500px;
+    background: #A2B9EF;
+    bottom: -100px;
+    left: 425px;
+    overflow: hidden;
+}
+
+.animatebox::before {
+    content: '';
+    position: absolute;
+    left: -50%;
+    top: -50%;
+    width: 600px;
+    height: 500px;
+    background: linear-gradient(0deg, transparent, #110BE6, #595BAE);
+    transform-origin: bottom right;
+    animation: animate 8s linear infinite;
+}
+
+.animatebox::after {
+    content: '';
+    position: absolute;
+    left: -50%;
+    top: -50%;
+    width: 600px;
+    height: 500px;
+    background: linear-gradient(0deg, transparent,#110BE6, #595BAE);
+    transform-origin: bottom right;
+    animation: animate 8s linear infinite;
+    animation-delay: -4s;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+.form {
+    width: 593px;
+    height: 493px;
+    background:#489DF3;
+    position: absolute;
+    left: 436px;
+    top: 111px;
+    border-radius: 2px;
+}
+
+.form h2 {
+    color: #E1E6EF;
+    text-align: center;
+    font-size: 38px;
+    font-family:'Courier New', Courier, monospace;
+    font-style: inherit;
+}
+
+.form p {
+    margin-bottom: 5px;
+    padding: 0px;
+    font-weight: bold;
+    color: #f0f9faf9;
+    font-size: 25px;
+    margin-left: 220px;
+}
+
+.form .link {
+    color: #040707f9;
+    font-size: 15px;
+    margin-bottom: 0px;
+    margin-left: 238px;
+}
+
+.form input {
+    margin-bottom: 20px;
+    margin-left: 220px;
+}
+
+
+
+
+.form .button {
+    background-color: #cfcede;
+    padding: 7px;
+    width: 100px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    animation: bn53bounce 1s infinite;
+    cursor: pointer;
+    margin-left: 20px;
+    margin-top: 50px;
+    min-height: 30px;
+    min-width: 120px;
+}
+
+
+@keyframes bn53bounce {
+
+    5%,
+    50% {
+        transform: scale(1);
+    }
+
+    10% {
+        transform: scale(1);
+    }
+
+    15% {
+        transform: scale(1);
+    }
+
+    20% {
+        transform: scale(1) rotate(-10deg);
+    }
+
+    25% {
+        transform: scale(1) rotate(10deg);
+    }
+
+    30% {
+        transform: scale(1) rotate(-3deg);
+    }
+
+    35% {
+        transform: scale(1) rotate(2deg);
+    }
+
+    40% {
+        transform: scale(1) rotate(0);
+    }
+}
+
+
+.form input[type="text"],
+.form input[type="password"] {
+  border: none;
+  border-bottom: 4px solid rgb(7, 5, 6);
+  outline: none;
+  height: 25px;
+
+}
+
+.form input[type="text"]:focus,
+.form input[type="password"]:focus {
+  border-bottom: 4px solid#5b5e5b;
+}
